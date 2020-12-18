@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        li{
+            list-style: none;
+        }
+        .all{
+            background: url("imgs/1.jpg")repeat;
+            background-size:100% 100%;
+        }
+        .begin {
+            float:left;
+            width:700px;
+            height:100px;
+        }
+        .begin li{
+            float:left;
+            
+        }
+        .begin li a{
+            display: block;
+            width:230px;
+            text-align: center;
+            padding:35px 0;
+            font-size: 20px;
+            color: darkslategrey;
+            border-right:1px solid black;
+            border-bottom:3px solid rgb(177, 206, 226);
+        }
+        .begin li a:hover{
+            color:slateblue;
+            border-color: slateblue;
+        }
+        #first{
+            height:100px;
+            width:1263px;
+            margin:0 auto;/*盒子水平居中 */
+        }
+        #input1{
+            vertical-align: middle;
+            height:25px;
+            width:200px;
+            background-color: rgb(236, 225, 212);
+            border:none;
+            outline: none;
+        }
+        .sreach{
+            margin:30px;
+            width:250px;
+            height:25px;
+            float: left;
+        }
+        .qi{
+            font-family:宋体;
+        }
+        #btn1{
+            height:25px;
+            width:30px;
+            border: none;
+            outline: none;
+        }
+        #img1{
+            float: left;
+            height:100px;
+            width:230px;
+            
+        }
+        #imgroll{
+            margin-top: 100px;
+            height:300px;
+            width:850px;
+            margin: 0 auto;
+        }
+        .roll{
+            height:300px;
+            width:850px;
+        }
+        .title{
+            background-image:-webkit-linear-gradient(bottom,red,#fd8403,yellow); 
+            -webkit-background-clip:text; 
+            background-clip: text;
+            -webkit-text-fill-color:transparent; 
+            margin-top: 40px;
+            font-size: large;
+            width:500px;
+        }
+        .con{
+            border: 10px solid transparent;
+            border-radius: 15px 0 15px 0;
+            width:820px;
+            margin: 0 auto;
+            overflow: hidden;
+            height:100px;
+            background:linear-gradient(to bottom right,rgb(234, 235, 211),rgb(221, 173, 68));
+        }
+        .second{
+            height:500px;
+            width:850px;
+            margin: 0 auto;
+        }
+        .nav{
+            width:70px;
+            font-size: 60px;
+            float: left;
+            padding:10px;
+            height: 388px;
+        }
+        .show{
+            font-family:cursive;
+            font-weight: 5px;;
+           
+            text-shadow:rgb(143, 101, 101);
+        }
+        #didadi{
+            height:70px;
+            width:90px;
+        }
+        .di{
+            height:40px;
+            width:80px;
+        }
+        .cat{
+            background:linear-gradient(to bottom right,rgb(234, 235, 211),rgb(221, 173, 68));
+            border: 2px solid transparent;
+            border-radius: 15px 0 15px 0;
+            margin-top: 10px;
+            float:left;
+            width:740px;
+            height:500px;
+        }
+        .catul::after{
+            content:'';
+            height:0;
+            display: block;
+            clear: both;
+        }
+        .cat li{
+            float: left;
+            margin-left:4px;
+            margin-bottom: 4px;
+            position: relative;
+            background:rgb(207, 168, 99); 
+            width:240px;
+            height:240px;   
+        }
+        .cat img{
+            margin-left:8px;
+            width:230px;
+            height:240px;
+        }
+        .cat p{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width:220px;
+            line-height: 14px;
+            font-size: 13px;
+            background:rgba(153, 149, 143, 0.6);
+            padding-left: 10px;
+            margin: 0 auto;
+            font-family: 宋体;
+            font-weight: 600;
+        }
+        .span{
+            display:inline-block;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .third{
+            width:850px;
+            height:100px;
+            border-image:  url("imgs/10.png")100% 8 0 stretch;
+            border-image-slice: 10 fill;
+            margin:0 auto;
+        }
+        #main{
+            background:linear-gradient(to bottom right,rgb(234, 235, 211),rgb(221, 173, 68));
+            border: 10px solid transparent;
+            border-radius: 15px 0 15px 0;
+            width:850px;
+            margin:auto;
+            display: none;
+            height:400px;
+            margin-bottom: 20px;
+
+        }
+        #smallpic{
+            height:120px; 
+        }
+        img{
+            width:170px;
+            height:120px;
+            float:left; 
+            margin-right:11px; 
+            margin-bottom:11px;
+            border:3px solid white;
+        }
+        #smallpic img:hover{
+            cursor:pointer;
+        }
+        .pb {
+            border:3px solid red;
+        }
+        #bigpic{
+            width:600px;
+            height:300px;
+            display: none;
+            margin-left:300px ;
+        }
+        .beautiful{
+            font-style: rgb(248, 189, 28);
+            font-size: large;
+            height:100px;
+            width: 850px;
+            margin: auto;
+            background:linear-gradient(to top right,rgb(234, 235, 211),rgb(221, 173, 68));
+            border: 10px solid transparent;
+            border-radius: 15px 0 15px 0;
+            display: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div id="first">
+            <img src="imgs/1.png" id="img1">
+            <ul class="begin">
+                <li id="page"><a href="#">首页</a></li>
+                <li id="picture"><a href="#">猫主子萌照</a></li>
+                <li id="tip"><a href="#">养猫小贴士</a></li>
+            </ul>
+            <div class="sreach">
+                <div class="qi">好奇框</div>
+                <input type="text" id="input1" placeholder="请输入你想查找的内容">
+                <input type="button" id="btn1" value="搜索"></iput>
+            </div>
+        </div>
+        <div id="main">
+            <div id="smallpic">
+                <img src="imgs/mao1.jpg"   />
+                <img src="imgs/mao2.jpg"   />
+                <img src="imgs/mao3.jpg"   />
+                <img src="imgs/mao4.jpg"   />
+                <img src="imgs/mao5.jpg"  />
+                <img src="imgs/mao12.jpg"  />
+                <img src="imgs/mao7.jpg"   />
+                <img src="imgs/mao8.jpg"  />
+                <img src="imgs/mao9.jpg"  />
+                <img src="imgs/mao10.jpg"   />
+                <img src="imgs/mao11.jpg"   />
+                <img src="imgs/mao13.jpg" />
+            </div>
+        </div>
+        <div class="beautiful">
+            人类，我的美丽你不懂！！！
+        </div>
+        <div >
+            <img src="imgs/mao6.jpg" id="bigpic"/>
+        </div>
+
+       
+        <div id="imgroll"></div>
+        <div class="con">
+            <div class="title">
+                欢迎来到猫咪的世界，它们的优秀可是你羡慕不来的哦！！
+            </div>
+        </div>
+        <div class="second">
+            <div class="nav">
+                <div class="show">猫咪展示</div>
+                <div id="didadi"></div>
+            </div>
+            <div class="cat">
+                <ul class="catul">
+                    <li>
+                        <img src="imgs/cat1.jpg"  alt="">
+                        <p>姓名：小八</br>&nbsp<span>公，一岁。猫如其名，额头上有个灰色的“八”字，是启智园“棉花糖”的孩子</span></p>
+                    </li>
+                    <li>
+                        <img src="imgs/cat2.jpg"  alt="">
+                        <p>姓名：小橘</br>&nbsp<span>公，纯橘，和“小八”差不多的年纪。和“小八”是非常好的朋友，经常邀请它一起吃饭</span></p>
+                    </li>
+                    <li>
+                        <img src="imgs/cat3.jpg"  alt="">
+                        <p>姓名：芝麻</br>&nbsp<span>公，三岁，已免疫绝育，胖起来酷似一只芝麻馅的白汤圆。曾经家庭美满爱情幸福羡煞旁人，开学之后“小伞花”失踪，日日流连碎心湖畔的等待为它蒙上一层“痴情”猫设</span></p>
+                    </li>
+                    <li>
+                        <img src="imgs/cat4.jpg"  alt="">
+                        <p>姓名:大胖橘</br>&nbsp<span>公，已免疫绝育，年龄不明出身不明，因其重达12.6斤的身材，娇憨又带点忧郁的性格，最重要的吸粉点是“可撸”，让它迅速占据了撸猫群的最大版面。超级爱吃，曾因偷吃被食堂大叔当场“抓包”。橘猫中的王者，真正“我这一屁股做下去你可能会死的”的真实写照。</span></p>
+                    </li>
+                    <li>
+                        <img src="imgs/cat5.jpg"  alt="">
+                        <p>姓名:小三花</br>&nbsp<span>母，二岁，是一位英雄母亲，生过三窝猫，是“芝麻”的爱人，“脏脏包”的妈妈。今年7月初突然失踪。</span></p>
+                    </li>
+                    <li>
+                        <img src="imgs/cat6.jpg"  alt="">
+                        <p>姓名：小橘白</br>&nbsp<span>公，一岁，出现时日尚短。可能是从学校外面跑进来的猫，出现在启智园。非常粘人，喜欢被撸，但是不让抱。肚子上有胶，可能是趴到粘鼠板上了，现已清理。</span></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="third">
+        </div>
+    </div>
+</body>
+<script>
+    var imgroll=document.getElementById("imgroll");//滚动图片
+    var ir=document.createElement("img");
+    var index=1;
+    ir.setAttribute("src","./imgs/first"+index+".png");
+    ir.setAttribute("class","roll");
+    imgroll.appendChild(ir);
+    var rolld=setInterval(function(){
+        index=index+1;
+        ir.setAttribute("src","./imgs/first"+index+".png");
+        ir.setAttribute("class","roll");
+        imgroll.appendChild(ir);
+
+        if(index==9){
+            index=1;
+        }
+    },2000)
+    var smallpic = document.getElementById("smallpic");
+     var imgList = smallpic.getElementsByTagName("img");
+     var bigpic = document.getElementById("bigpic");
+     for(var i = 0; i < imgList.length; i++) {
+         imgList[i].onclick = function() {
+             for(var i = 0; i < imgList.length; i++) {
+                 if(imgList[i].hasAttribute("class")) {
+                    imgList[i].removeAttribute("class");
+                 }
+             }
+             this.setAttribute("class", "pb");
+             var imgSrc = this.getAttribute("src");
+             bigpic.setAttribute("src", imgSrc);
+
+             this.setAttribute("index", 1);
+         }
+     }
+    var didadi=document.getElementById("didadi");
+    var dadi=document.createElement("img");
+    var indexdi=1;
+    var roll=setInterval(function(){
+        dadi.setAttribute("src","./imgs/roll"+indexdi+".jpg");
+        dadi.setAttribute("class","di");
+        didadi.appendChild(dadi);
+        indexdi=indexdi+1;
+        if(indexdi==8){
+            indexdi=1;
+        }
+    },1000)
+    var input1=document.getElementById("input1");//输入框
+    input1.onfocus=function(){
+        input1.value=" ";
+    }
+    var title=document.getElementsByClassName("title");
+    title[0].style.marginLeft="0";
+    var intervalId=setInterval(function(){
+        var marginLeft=parseInt(title[0].style.marginLeft);
+        if(marginLeft==800){
+            title[0].style.marginLeft="0";
+            marginLeft="0";
+        }
+        title[0].style.marginLeft=(marginLeft+1)+"px";
+    },10)
+    var page=document.getElementById("page");
+    var picture=document.getElementById("picture");
+    var tip=document.getElementById("tip");
+    picture.onclick=function(){
+        document.getElementById("imgroll").style.display= "none";
+        document.getElementsByClassName("con")[0].style.display= "none";
+        document.getElementsByClassName("second")[0].style.display= "none";
+        document.getElementsByClassName("third")[0].style.display= "none";
+        document.getElementsByClassName("beautiful")[0].style.display= "block";
+        document.getElementById("bigpic").style.display= "block";
+        document.getElementById("main").style.display="block";
+    }
+    page.onclick=function(){
+        document.getElementById("imgroll").style.display= "block";
+        document.getElementsByClassName("con")[0].style.display= "block";
+        document.getElementsByClassName("second")[0].style.display= "block";
+        document.getElementsByClassName("third")[0].style.display= "block";
+        document.getElementById("main").style.display="none";
+        document.getElementsByClassName("beautiful")[0].style.display= "none";
+        document.getElementById("bigpic").style.display= "none";
+    }
+    tip.onclick=function(){
+        window.location.href="https://baijiahao.baidu.com/s?id=1645994969985075451&wfr=spider&for=pc";
+    }
+    btn1.onclick=function(){
+        window.location.href="http://baidu.com/";
+    }
+</script>
+</html>
